@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="application.ControllerEtudiant">
+    <children>
+        <HBox spacing="10">
+            <children>
+                <Label text="Nom:"/>
+                <TextField fx:id="nomField"/>
+            </children>
+        </HBox>
+        <HBox spacing="10">
+            <children>
+                <Label text="Prénom:"/>
+                <TextField fx:id="prenomField"/>
+            </children>
+        </HBox>
+        <HBox spacing="10">
+            <children>
+                <Label text="Sexe:"/>
+                <TextField fx:id="sexeField"/>
+            </children>
+        </HBox>
+        <HBox spacing="10">
+            <children>
+                <Label text="Filière:"/>
+                <TextField fx:id="filiereField"/>
+            </children>
+        </HBox>
+        <Button text="Ajouter" onAction="#handleAdd"/>
+        <Button text="Supprimer" onAction="#handleDelete"/>
+        <TableView fx:id="tableView">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID"/>
+                <TableColumn fx:id="nomColumn" text="Nom"/>
+                <TableColumn fx:id="prenomColumn" text="Prénom"/>
+                <TableColumn fx:id="sexeColumn" text="Sexe"/>
+                <TableColumn fx:id="filiereColumn" text="Filière"/>
+            </columns>
+        </TableView>
+    </children>
+</VBox>
